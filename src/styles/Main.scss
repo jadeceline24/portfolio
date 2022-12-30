@@ -1,0 +1,127 @@
+@use './Variables/' as *;
+
+.main{
+    height: 100%;
+    overflow: hidden;
+    background-color: $body-color;
+    z-index: 100;
+    position: relative;
+    padding-top: 6rem;
+    .image{
+        width: 5vmin;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        &[data-status='inactive']{
+            opacity: 0;
+            transition: all 1s cubic-bezier(.645, .045, .355, 1);
+        }
+        &[data-status='active']{
+            opacity: 1;
+            
+        }
+    }
+    
+        .header-title{
+            padding: 3rem 0;
+            pointer-events: none;
+            .title{
+                font-size: 14rem;
+                line-height: 0.9;
+                @include breakpoint(large){
+                    font-size: 10rem;
+                }
+                @include breakpoint(medium){
+                    font-size: 7rem;
+                }
+                @include breakpoint(small){
+                    font-size: 6rem;
+                }
+                
+            }
+            .moving-text{
+                width: 100%;
+                overflow: hidden;
+                height: auto;
+
+                .text{
+                    display: inline-block;
+                    font-style: italic;
+                    font-size: $font-size-xxxl;
+                    letter-spacing: 5px;
+                    white-space: nowrap;
+                    animation: movingtext 40s linear infinite;
+                    
+                }
+            }
+        }
+        
+        .header-text{
+            display: flex;
+            text-transform: uppercase;
+            padding-top: 2rem;
+            flex-flow: row wrap;
+           
+            .text-left {
+                width: 75%;
+                .info{
+                    font-size: $font-size-xl;
+                    font-weight: 400;
+                }
+                @include breakpoint(medium){
+                    flex-grow: 3;
+                    .info{
+                        font-size: $font-size-lg;
+                        font-weight: 400;
+                    }
+                }
+                @include breakpoint(small){
+                   text-align: center;
+                }
+            }
+            .time{
+                width: 12.5%;
+                color: $text-color2;
+                @include breakpoint(medium){
+                    flex-grow: 1;
+                    font-size: $font-size-sm;
+                }
+                @include breakpoint(small){
+                    text-align: center;
+                    padding: 1rem;
+                    flex-basis: 100%;
+                }
+            }
+            
+            .text-right{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 12.5%;
+                text-align: right;
+                color: $text-color2;
+                @include breakpoint(medium){
+                    padding-bottom: 1rem;
+                    flex-basis: 100%;
+                }
+                & > p{
+                    display: inline-block;
+                    padding-right: 0.5rem;
+                    text-align: center;
+                }
+                .circle{
+                    display: inline-block;
+                    padding: 0.8rem 1rem;
+                    background-color: $body-color2;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    &:hover{
+                        transform: translateY(8px);
+                        transition: $transition;
+                    }
+                }
+            }
+
+        }
+    
+}

@@ -1,0 +1,100 @@
+@use './Variables/' as *;
+
+.move{
+    position: relative;
+    display: block;
+    height: 100vh;
+    background-color: $text-color;
+    font-size: 17em;
+    font-family: 'Bebas Neue', cursive;
+    color: $body-color;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 100;
+   
+    @include breakpoint(medium){
+        font-size: 8em;
+        height:50vh;
+        
+    }  
+    .marquee{
+       position: absolute;
+       white-space: nowrap;
+       display: block; 
+       overflow: hidden;
+       line-height: 0.8;
+       z-index: 10;
+       padding: 3rem 0;
+       
+       
+       &:hover .first{
+        transition: $transition;
+        opacity: 0.3;
+       }
+       &:hover .sec{
+        transition: $transition;
+        opacity: 0.3;
+       }
+       &:hover .third{
+        transition: $transition;
+        opacity: 0.3;
+       }
+       &:hover .fourth{
+        transition: $transition;
+        opacity: 0.3;
+       }
+       
+
+        .forward{
+            display: flex;
+            max-width: 100%;
+            height: 100%;
+            animation: movingtext 500s linear infinite ;
+            transition: $transition;
+            &:hover .first{
+                transition: $transition;
+                opacity: 1;
+            }
+            
+        }
+        .backward{
+            display: flex;
+            max-width: 100%;
+            height: 100%;
+            animation: movingtext 290s linear infinite reverse;
+            &:hover .sec{
+                transition: $transition;
+                opacity: 1;
+            }
+        }
+        .forwardtwo{
+            display: flex;
+            max-width: 100%;
+            height: 100%;
+            animation: movingtext 300s linear infinite;
+            &:hover .third{
+                transition: $transition;
+                opacity: 1;
+            }
+        }
+        .backwardtwo{
+            display: flex;
+            max-width: 100%;
+            height: 100%;
+            animation: movingtext 320s linear infinite reverse;
+            &:hover .fourth{
+                transition: $transition;
+                opacity: 1;
+            }
+            
+        }
+        
+        
+        
+        
+      
+    }
+    
+    
+}

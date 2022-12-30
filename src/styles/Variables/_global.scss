@@ -1,0 +1,59 @@
+@use './variables/' as v;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
+
+    *,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    }
+    
+    html{
+      scroll-behavior: smooth;
+    }
+    body{
+      font-family: 'Inter', sans-serif;
+    background: v.$body-color;
+    color: v.$text-color;
+ 
+    }
+    h1 {
+    font-family: 'Bebas Neue', cursive;
+    
+    }
+    h2, h4, h5 {
+      font-family: 'Inter', sans-serif;
+    }
+    h3{
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: v.$font-size-xl;
+    }
+    p{
+      font-family: 'Inter', sans-serif;
+    }
+    
+    img, video {
+    // display: block; 
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    }
+    
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    a{
+      color: v.$text-color;
+      transition: v.$transition;
+    }
+    a:hover{
+        color: v.$text-color;
+    }
+    .container{
+        width: v.$container-width-sm;
+        margin:0 auto;
+    }
