@@ -1,0 +1,48 @@
+@use './Variables/' as *;
+
+.loader-con{
+  background-color: $body-color;
+  overflow: hidden;
+  .loader-wrap {
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+
+    svg {
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 110vh;
+    }
+    .loader-wrap-heading {
+      font-size: $font-size-lg;
+      z-index: 20;
+      color: $body-color;
+      text-transform: uppercase;
+      
+      .text-wrap {
+        overflow: hidden;
+        display: block;
+       
+      }
+      
+    }
+  }
+}
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    .text{
+      font-size: $font-size-xxxl;
+    }
+  }
+ 

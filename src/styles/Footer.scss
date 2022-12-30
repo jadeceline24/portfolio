@@ -208,6 +208,12 @@
             .image{
                 height: 15px;
             }
+            @include breakpoint(small){
+                text-align: center;
+
+                
+    
+            }
         }
         .footer_top{
             display: flex;
@@ -226,6 +232,16 @@
                         transition: $transition;
                 }
             }
+            @include breakpoint(small){
+               padding-bottom: 2rem;
+    
+            }
+        }
+        @include breakpoint(small){
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+
         }
     }
 }

@@ -18,6 +18,9 @@
         height:50vh;
         
     }  
+    @include breakpoint(small){
+        height: 70vh;
+    }
     .marquee{
        position: absolute;
        white-space: nowrap;

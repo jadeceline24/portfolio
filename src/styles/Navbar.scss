@@ -15,39 +15,45 @@
         align-items: center;
         padding-top: 3rem;
         
-        
-        .text{
-            font-size: $font-size-base;
-            
+        .logo{
+            display: flex;
+            align-items: center;
         }
-    
-        .email{
-            
-            a{
+        
+        .contact{
+            .text{
+                font-size: $font-size-base;
                 
-                .icon{
-                    display: inline-block;
-                    font-size: 1.3rem;
-                    animation:whooosh2 .3s ease-out;
-                    
-                }
-               
-                .emailtext{
-                    padding: 0 0.5rem;
-                    width: max-content;
-                    font-size: $font-size-base;
-                    font-weight: 600;
-                    animation: none;
-                    
-                   
-                }
-                &:hover .icon {
-                    animation:whooosh 1s ease-out forwards;
-                }
             }
-            
-            
-            
+        
+            .email{
+                
+                a{
+                    
+                    .icon{
+                        display: inline-block;
+                        font-size: 1.3rem;
+                        animation:whooosh2 .3s ease-out;
+                        
+                    }
+                   
+                    .emailtext{
+                        padding: 0 0.5rem;
+                        width: max-content;
+                        font-size: $font-size-base;
+                        font-weight: 600;
+                        animation: none;
+                        
+                       
+                    }
+                    &:hover .icon {
+                        animation:whooosh 1s ease-out forwards;
+                    }
+                }
+                
+                
+                
+            }
         }
        
         
