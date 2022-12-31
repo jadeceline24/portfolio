@@ -60,7 +60,7 @@ const Footer = () => {
       <div className="footer__socials">
         <a
           className="link"
-          href="https://www.linkedin.com/in/jade-celine-tapawan-388b4898"
+          href="https://www.linkedin.com/in/jade-celine"
           target="_blank"
           data-hover="LINKEDIN">
           LINKEDIN
