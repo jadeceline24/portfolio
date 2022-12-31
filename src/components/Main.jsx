@@ -27,16 +27,20 @@ const Main = () => {
       tl.from(['.title', '.moving-text', '.info', '.time', '.scroll', '.circle'], {
         duration: 0.5,
         y: -80,
-        ease: 'power2',
+        opacity:0,
+        ease: 'slow',
         stagger: {
           amount: 0.8
         },
         delay: 0.3
       }).to(['.title', 'moving-.text', '.info', '.time', '.scroll', '.circle'], {
         y: 0,
+        opacity:1,
         duration: 0.2,
-        ease: 'power2'
-      });
+        ease: 'slow'
+      }).to('.circle',{
+
+      })
     }, wrap); // <- IMPORTANT! Scopes selector text
 
     return () => ctx.revert(); // cleanup
@@ -134,7 +138,7 @@ const Main = () => {
           </div>
           <div className="text-right">
             <p className="scroll">Scroll to Explore</p>
-            <span className="circle">
+            <span className="circle" >
               <AiOutlineArrowDown />
             </span>
           </div>
