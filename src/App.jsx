@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import MovingBox from './components/MovingBox';
 import Navbar from './components/Navbar';
 import Loader from './components/Loader';
+import ReactGA from 'react-ga';
 
 const Main = lazy(() => import('./components/Main'));
 const Projects = lazy(() => import('./components/Projects'));
@@ -13,6 +14,12 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    //Google Analytics
+    const TRACKING_ID = 'UA-259494900-1';
+    ReactGA.initialize(TRACKING_ID);
+    ReactGA.pageview('/')
+
+    //Loader
     const t = setTimeout(() => {
       setLoading(false);
     }, 7000);
